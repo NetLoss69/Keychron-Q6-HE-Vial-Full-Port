@@ -1,0 +1,64 @@
+{
+    "keyboard_name": "Keychron Q6 HE",
+    "manufacturer": "Keychron",
+    "url": "https://github.com/Keychron",
+    "maintainer": "Keychron",
+    "processor": "STM32F401",
+    "bootloader": "stm32-dfu",
+    "usb": {
+        "vid": "0x3434"
+    },
+    "features": {
+        "bootmagic": true,
+        "extrakey" : true,
+        "mousekey" : true,
+        "dip_switch" : true,
+        "encoder": true,
+        "encoder_map": true,
+        "nkro" : true,
+        "rgb_matrix": true,
+        "raw": true,
+        "send_string": true
+    },
+    "host": {
+        "default": {
+            "nkro": true
+        }
+    },
+    "matrix_pins": {
+        "cols": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        "rows": ["C0", "C1", "C2", "C3", "A0", "A1"],
+        "custom": true,
+        "custom_lite": true
+    },
+    "diode_direction": "ROW2COL",
+    "encoder": {
+        "rotary": [
+            {
+                "pin_a": "B14",
+                "pin_b": "B15"
+            }
+        ]
+    },
+    "dip_switch" :{
+        "pins": ["B12"]
+    },
+    "rgb_matrix": {
+        "driver": "snled27351_spi",
+        "sleep": true,
+        "animations": {
+            "typing_heatmap": true
+        }
+    },
+    "eeprom": {
+        "wear_leveling": {
+            "driver": "embedded_flash",
+            "logical_size": 24576,
+            "backing_size": 122880
+        }
+    },
+    "build": {
+        "debounce_type": "sym_eager_pk"
+    },
+    "debounce": 0
+}
